@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0e1117;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+  background: linear-gradient(to bottom, #0e1117, #11141c);
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+/* Timeline Section */
+.timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.milestone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  border-left: 2px solid #3a3f4b;
+  padding-left: 20px;
+  position: relative;
+}
+
+.milestone::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-color: #00ffee;
+  border-radius: 50%;
+  position: absolute;
+  left: -8px;
+  top: 0;
+}
+
+.left h3 {
+  font-size: 16px;
+  color: #a0a0a0;
+}
+
+.left h2 {
+  font-size: 28px;
+  margin: 10px 0 5px;
+}
+
+/* Placeholder Style for Images & Videos */
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  background-color: #10131b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 14px;
+  font-style: italic;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Unique Border Colors */
+.image-1 { border: 2px solid #1f2a44; }
+.image-2 { border: 2px solid #2c364d; }
+.image-3 { border: 2px solid #3a4355; }
+.image-4 { border: 2px solid #444d5a; }
+
+/* Hover Effects (Neon Glow) */
+.image-1:hover {
+  box-shadow: 0 0 12px 2px #00bfff80;
+  border-color: #00bfff;
+}
+.image-2:hover {
+  box-shadow: 0 0 12px 2px #00a3cc80;
+  border-color: #00a3cc;
+}
+.image-3:hover {
+  box-shadow: 0 0 12px 2px #0099bb80;
+  border-color: #0099bb;
+}
+.image-4:hover {
+  box-shadow: 0 0 12px 2px #007a9980;
+  border-color: #007a99;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  cursor: pointer;
+}
+
+.gallery-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+/* Video Section Matches Gallery */
+.videos {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.videos h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #0a0c10;
+  font-size: 14px;
+  opacity: 0.5;
+}

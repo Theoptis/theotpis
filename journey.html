@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Theoptis | Traction</title>
+  <link rel="stylesheet" href="traction.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/theoptis-logo.svg" alt="Theoptis Logo" class="logo-img" />
+    </a>
+  </nav>
+
+  <!-- HERO (remains without background image) -->
+  <section class="hero section-block fade-in">
+    <h1>Our Journey</h1>
+    <p>Tracking the growth of Theoptis — one milestone at a time.</p>
+  </section>
+
+  <!-- TIMELINE SECTION WITH BACKGROUND (journey-past.png in CSS) -->
+  <section class="timeline fade-in">
+    <div class="milestone">
+      <div class="left">
+        <h3>September 2020</h3>
+        <h2>HQ Launched</h2>
+        <p>Established our headquarters in Nairobi</p>
+      </div>
+      <div class="right image-placeholder image-1">Image Placeholder</div>
+    </div>
+
+    <div class="milestone">
+      <div class="left">
+        <h3>January 2021</h3>
+        <h2>First Satellite Test</h2>
+        <p>Conducted successful test of our proprietary satellite system</p>
+      </div>
+      <div class="right image-placeholder image-2">Image Placeholder</div>
+    </div>
+
+    <div class="milestone">
+      <div class="left">
+        <h3>April 2023</h3>
+        <h2>Expanded Operations</h2>
+        <p>Extended our satellite coverage to 15 African countries</p>
+      </div>
+      <div class="right image-placeholder image-3">Image Placeholder</div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION WITH BACKGROUND (journey-future.png in CSS) -->
+  <section class="gallery fade-in">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openPlaceholderGallery()">
+        <div class="image-placeholder image-1">Image Placeholder</div>
+        <p>Satellite dish in Kenya</p>
+      </div>
+      <div class="gallery-item" onclick="openPlaceholderGallery()">
+        <div class="image-placeholder image-2">Image Placeholder</div>
+        <p>Signal trail over city</p>
+      </div>
+      <div class="gallery-item" onclick="openPlaceholderGallery()">
+        <div class="image-placeholder image-3">Image Placeholder</div>
+        <p>Launch</p>
+      </div>
+      <div class="gallery-item" onclick="openPlaceholderGallery()">
+        <div class="image-placeholder image-4">Image Placeholder</div>
+        <p>Control room</p>
+      </div>
+      <div class="gallery-item" onclick="openPlaceholderGallery()">
+        <div class="image-placeholder image-1">Image Placeholder</div>
+        <p>Tech buildout</p>
+      </div>
+      <div class="gallery-item" onclick="openPlaceholderGallery()">
+        <div class="image-placeholder image-2">Image Placeholder</div>
+        <p>Partner integration</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS SECTION WITH BACKGROUND (same image as gallery in CSS) -->
+  <section class="videos fade-in">
+    <h2>Videos</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openPlaceholderGallery()">
+        <div class="image-placeholder image-1">Video Placeholder</div>
+        <p>Inside Theoptis HQ</p>
+      </div>
+      <div class="gallery-item" onclick="openPlaceholderGallery()">
+        <div class="image-placeholder image-2">Video Placeholder</div>
+        <p>Satellite Deployment</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (no background applied) -->
+  <footer class="footer fade-in">
+    <p>© 2025 Theoptis. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function openPlaceholderGallery() {
+      alert("Gallery popup coming soon — this will show 4 related images.");
+    }
+
+    // Fade-in IntersectionObserver
+    const fadeInSections = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeInSections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
+
+
